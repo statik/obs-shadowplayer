@@ -1,13 +1,9 @@
-# OBS Plugin Template
+# OBS Shadowplayer Plugin
 
 ## Introduction
 
-This plugin is meant to make it easy to quickstart development of new OBS plugins. It includes:
+This plugin is meant to provide advanced media playback features for OBS Studio.
 
-- The CMake project file
-- Boilerplate plugin source code
-- GitHub Actions workflows and repository actions
-- Build scripts for Windows, macOS, and Linux
 
 ## Configuring
 
