@@ -8,7 +8,6 @@
 #include <QVBoxLayout>
 #include <QWidgetAction>
 
-
 #include "obs.hpp"
 #include "plugin-macros.generated.h"
 
@@ -31,20 +30,18 @@ MODULE_EXPORT bool obs_module_load(void)
 	return true;
 }
 
-void ShadowplayerDock::frontend_save_load(obs_data_t *, bool saving,
-					     void *data)
+void ShadowplayerDock::frontend_save_load(obs_data_t *, bool saving, void *data)
 {
 	auto shadowplayerDock = static_cast<ShadowplayerDock *>(data);
 	if (saving) {
-	    //shadowplayerDock->Save(save_data);
+		//shadowplayerDock->Save(save_data);
 	} else {
 		//shadowplayerDock->Load(save_data);
-	    shadowplayerDock->ready = true;
+		shadowplayerDock->ready = true;
 	}
 }
 
-void ShadowplayerDock::frontend_event(enum obs_frontend_event ,
-					 void *)
+void ShadowplayerDock::frontend_event(enum obs_frontend_event, void *)
 {
 	//auto shadowplayerDock = static_cast<ShadowplayerDock *>(data);
 	// if (event == OBS_FRONTEND_EVENT_SCENE_COLLECTION_CLEANUP &&
@@ -88,7 +85,6 @@ ShadowplayerDock::~ShadowplayerDock()
 	obs_frontend_remove_event_callback(frontend_event, this);
 	//ClearKeyers();
 }
-
 
 void ShadowplayerDock::ConfigClicked()
 {

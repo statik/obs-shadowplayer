@@ -9,7 +9,7 @@ class ShadowplayerDock : public QDockWidget {
 	Q_OBJECT
 private:
 	bool ready;
-    QTabWidget *tabs;
+	QTabWidget *tabs;
 
 	static void frontend_event(enum obs_frontend_event event, void *data);
 	static void change_scene(obs_data_t *request_data,
@@ -22,8 +22,8 @@ private:
 	void ConfigClicked();
 private slots:
 	void Add();
-// 	void Rename();
-// 	void Remove();
+	// 	void Rename();
+	// 	void Remove();
 
 public:
 	ShadowplayerDock(QWidget *parent = nullptr);
