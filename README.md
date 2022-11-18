@@ -5,22 +5,6 @@
 This plugin is meant to provide advanced media playback features for OBS Studio.
 
 
-## Configuring
-
-Open `buildspec.json` and change the name and version of the plugin accordingly. This is also where the obs-studio version as well as the pre-built dependencies for Windows and macOS are defined. Use a release version (with associated checksums) from a recent [obs-deps release](https://github.com/obsproject/obs-deps/releases).
-
-Next, open `CMakeLists.txt` and edit the following lines at the beginning:
-
-```cmake
-project(obs-plugintemplate VERSION 1.0.0)
-
-set(PLUGIN_AUTHOR "Your Name Here")
-
-set(LINUX_MAINTAINER_EMAIL "me@contoso.com")
-```
-
-The build scripts (contained in the `.github/scripts` directory) will update the `project` line automatically based on values from the `buildspec.json` file. If the scripts are not used, these changes need to be done manually.
-
 ## GitHub Actions & CI
 
 The scripts contained in `github/scripts` can be used to build and package the plugin and take care of setting up obs-studio as well as its own dependencies. A default workflow for GitHub Actions is also provided and will use these scripts.
