@@ -174,6 +174,7 @@ Usage: %B${functrace[1]%:*}%b <option> [<options>]
 
   case ${host_os} {
     macos)
+      echo Project root is ${project_root}
       sed -i '' \
         "s/project(\(.*\) VERSION \(.*\))/project(${product_name} VERSION ${product_version})/" \
         "${project_root}/CMakeLists.txt"
