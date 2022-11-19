@@ -1,0 +1,39 @@
+name-template: "v$RESOLVED_VERSION ⛴️"
+tag-template: "v$RESOLVED_VERSION"
+categories:
+  - title: "🎬 Features"
+    labels:
+      - "feature"
+      - "enhancement"
+  - title: "🪳 Bug Fixes"
+    labels:
+      - "fix"
+      - "bugfix"
+      - "bug"
+  - title: "🧰 Maintenance"
+    labels:
+      - "chore"
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+template: |
+  ## Changes
+  $CHANGES
+  **All Changes**: https://github.com/statik/obs-shadowplayer/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION
+  ## Contributors
+  $CONTRIBUTORS
+version-resolver:
+  major:
+    labels:
+      - 'type: breaking'
+  minor:
+    labels:
+      - 'type: feature'
+  patch:
+    labels:
+      - 'type: bug'
+      - 'type: maintenance'
+      - 'type: docs'
+      - 'type: dependencies'
+      - 'type: security'
+
+exclude-labels:
+  - 'skip-changelog'
